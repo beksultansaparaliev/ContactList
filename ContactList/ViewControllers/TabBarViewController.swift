@@ -8,11 +8,18 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-
-    let contacts = Person.getContact()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Реализовать передачу данных
+        setupViewControllers()
+    }
+    
+    private func setupViewControllers() {
+        guard let firstVC = viewControllers?.first as? FirstPageViewController else { return }
+        guard let secondVC = viewControllers?.last as? SecondPageViewController else { return }
+        
+        let persons = Person.getContact()
+        firstVC.contacts = persons
+        secondVC.contacts = persons
     }
 }

@@ -7,8 +7,12 @@
 
 import Foundation
 
+// Singeton класс
 class DataManager {
-    let names: [String] = [
+    
+    static let shared = DataManager()
+    
+    let names = [
         "Quanah",
         "Hezekiah",
         "Urbain",
@@ -20,7 +24,8 @@ class DataManager {
         "Xandros",
         "Gerald"
     ]
-    let surnames: [String] = [
+    
+    let surnames = [
         "Morris",
         "Martin",
         "Bryant",
@@ -32,7 +37,8 @@ class DataManager {
         "Cox",
         "Cooper"
     ]
-    let eMails: [String] = [
+    
+    let eMails = [
         "Kelly",
         "Wilson",
         "Price",
@@ -44,7 +50,8 @@ class DataManager {
         "Jenkins",
         "Young"
     ]
-    let phoneNumbers: [String] = [
+    
+    let phoneNumbers = [
         "808-555-0157",
         "808-555-0170",
         "808-555-0195",
@@ -56,4 +63,6 @@ class DataManager {
         "518-555-0180",
         "518-555-0182"
     ]
+    
+    private init() {}
 }

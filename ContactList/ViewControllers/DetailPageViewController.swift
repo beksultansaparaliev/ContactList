@@ -8,7 +8,6 @@
 import UIKit
 
 class DetailPageViewController: UIViewController {
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
@@ -16,7 +15,7 @@ class DetailPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = contact.fullname
+        title = contact.fullname
         phoneLabel.text = "Phone: \(contact.phoneNumber)"
         emailLabel.text = "Email: \(contact.eMail)@mail.ru"
     }

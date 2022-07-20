@@ -9,8 +9,7 @@ import UIKit
 
 class FirstPageViewController: UITableViewController {
     
-//    var contacts: [Person]!
-    let contacts = Person.getContact()
+    var contacts: [Person]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,20 +23,18 @@ class FirstPageViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "first", for: indexPath)
         var content = cell.defaultContentConfiguration()
+        
         content.text = contacts[indexPath.row].fullname
+//        content.textProperties.color = .blue
         cell.contentConfiguration = content
         return cell
     }
     
-    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailVC = segue.destination as? DetailPageViewController else { return }
-        detailVC.contact = sender as? Person
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let contact = contacts[indexPath.row]
-        performSegue(withIdentifier: "showDetail", sender: contact)
+        if let indexPath = tableView.indexPathForSelectedRow {
+            guard let detailVC = segue.destination as? DetailPageViewController else { return }
+            detailVC.contact = contacts[indexPath.row]
+        }
     }
 }

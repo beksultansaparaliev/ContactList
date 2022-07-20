@@ -9,17 +9,15 @@ import UIKit
 
 class SecondPageViewController: UITableViewController {
 
-//    var contacts: [Person]!
-    let contacts = Person.getContact()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    var contacts: [Person]!
 
     // MARK: - Tableview DataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
         contacts.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        contacts[section].fullname
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,29 +25,26 @@ class SecondPageViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contactsPhone", for: indexPath)
         
-        if indexPath.row == 0 {
-            let phoneCell = tableView.dequeueReusableCell(withIdentifier: "contactsPhone", for: indexPath)
-            
-            var content = phoneCell.defaultContentConfiguration()
-            content.text = contacts[indexPath.section].phoneNumber
+        let person = contacts[indexPath.section]
+        var content = cell.defaultContentConfiguration()
+        
+        switch indexPath.row {
+        case 0:
+            content.text = person.phoneNumber
             content.image = UIImage(systemName: "phone")
-            
-            phoneCell.contentConfiguration = content
-            return phoneCell
-        } else {
-            let emailCell = tableView.dequeueReusableCell(withIdentifier: "contactsEmail", for: indexPath)
-            
-            var content = emailCell.defaultContentConfiguration()
-            content.text = "\(contacts[indexPath.section].eMail)@mail.ru"
-            content.image = UIImage(systemName: "tray.fill")
-            
-            emailCell.contentConfiguration = content
-            return emailCell
+        default:
+            content.text = person.eMail
+            content.image = UIImage(systemName: "tray")
         }
+        
+        cell.contentConfiguration = content
+        
+        return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        contacts[section].fullname
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
