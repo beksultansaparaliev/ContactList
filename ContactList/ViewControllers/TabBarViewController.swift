@@ -15,11 +15,12 @@ class TabBarViewController: UITabBarController {
     }
     
     private func setupViewControllers() {
-        guard let firstVC = viewControllers?.first as? FirstPageViewController else { return }
-        guard let secondVC = viewControllers?.last as? SecondPageViewController else { return }
+        guard let contactListVC = viewControllers?.first as? ContactListViewController else { return }
+        guard let sectionVC = viewControllers?.last as? SectionTableViewController else { return }
         
-        let persons = Person.getContact()
-        firstVC.contacts = persons
-        secondVC.contacts = persons
+        let persons = Person.getContactList()
+        contactListVC.persons = persons
+        sectionVC.persons = persons
     }
 }
+

@@ -5,63 +5,33 @@
 //  Created by Masaie on 23/3/22.
 //
 
-import Foundation
-
-// Singeton класс
 class DataManager {
     
     static let shared = DataManager()
     
     let names = [
-        "Quanah",
-        "Hezekiah",
-        "Urbain",
-        "Urban",
-        "Otis",
-        "Rafael",
-        "Lawson",
-        "Samir",
-        "Xandros",
-        "Gerald"
+        "John", "Aaron", "Tim", "Ted",
+        "Steven", "Sharon", "Nicola",
+        "Allan", "Bruce", "Carl"
     ]
     
     let surnames = [
-        "Morris",
-        "Martin",
-        "Bryant",
-        "Morgan",
-        "Powell",
-        "Cox",
-        "Jones",
-        "Martinez",
-        "Cox",
-        "Cooper"
+        "Smith", "Dow", "Isaacson", "Pennyworth",
+        "Jankin", "Butler", "Black", "Robertson",
+        "Murphy", "Williams"
     ]
     
-    let eMails = [
-        "Kelly",
-        "Wilson",
-        "Price",
-        "Gonzales",
-        "Gonzales",
-        "Green",
-        "Lee",
-        "Henderson",
-        "Jenkins",
-        "Young"
+    let emails = [
+        "jjjj@mail.ru", "aaaa@mail.ru", "eeee@mail.ru",
+        "hhhh@mail.ru", "wwww@mail.ru", "mmmm@mail.ru",
+        "xxxx@mail.ru", "pppp@mail.ru", "ssss@mail.ru",
+        "llll@mail.ru"
     ]
     
-    let phoneNumbers = [
-        "808-555-0157",
-        "808-555-0170",
-        "808-555-0195",
-        "808-555-0134",
-        "808-555-0159",
-        "518-555-0159",
-        "518-555-0156",
-        "518-555-0172",
-        "518-555-0180",
-        "518-555-0182"
+    let phones = [
+        "745396026", "145036843", "287185656", "293520954",
+        "562880225", "738594072", "825654134", "645898473",
+        "432349845", "459477625"
     ]
     
     private init() {}

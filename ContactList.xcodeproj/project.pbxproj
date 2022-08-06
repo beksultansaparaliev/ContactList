@@ -9,31 +9,31 @@
 /* Begin PBXBuildFile section */
 		5D561BF427EA742F00A70223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D561BF327EA742F00A70223 /* AppDelegate.swift */; };
 		5D561BF627EA742F00A70223 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D561BF527EA742F00A70223 /* SceneDelegate.swift */; };
-		5D561BF827EA742F00A70223 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D561BF727EA742F00A70223 /* DetailPageViewController.swift */; };
+		5D561BF827EA742F00A70223 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D561BF727EA742F00A70223 /* ContactDetailsViewController.swift */; };
 		5D561BFB27EA742F00A70223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D561BF927EA742F00A70223 /* Main.storyboard */; };
 		5D561BFD27EA743100A70223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D561BFC27EA743100A70223 /* Assets.xcassets */; };
 		5D561C0027EA743100A70223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D561BFE27EA743100A70223 /* LaunchScreen.storyboard */; };
-		5D561C0E27EA75FC00A70223 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D561C0D27EA75FC00A70223 /* FirstPageViewController.swift */; };
+		5D561C0E27EA75FC00A70223 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D561C0D27EA75FC00A70223 /* ContactListViewController.swift */; };
 		5D561C1227EA775400A70223 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D561C1127EA775400A70223 /* Person.swift */; };
 		5D561C1427EA77E900A70223 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D561C1327EA77E900A70223 /* DataManager.swift */; };
-		5D7C694327EB348C00FFD652 /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C694227EB348C00FFD652 /* SecondPageViewController.swift */; };
 		5D7C694527EB480F00FFD652 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C694427EB480F00FFD652 /* TabBarViewController.swift */; };
+		5DA5C8D7289E4EC700F900C3 /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5C8D6289E4EC700F900C3 /* SelectionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D561BF027EA742F00A70223 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D561BF327EA742F00A70223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D561BF527EA742F00A70223 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5D561BF727EA742F00A70223 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		5D561BF727EA742F00A70223 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		5D561BFA27EA742F00A70223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D561BFC27EA743100A70223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D561BFF27EA743100A70223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D561C0127EA743100A70223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D561C0D27EA75FC00A70223 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
+		5D561C0D27EA75FC00A70223 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		5D561C1127EA775400A70223 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		5D561C1327EA77E900A70223 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		5D7C694227EB348C00FFD652 /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
 		5D7C694427EB480F00FFD652 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5DA5C8D6289E4EC700F900C3 /* SelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				5D7C694427EB480F00FFD652 /* TabBarViewController.swift */,
-				5D561C0D27EA75FC00A70223 /* FirstPageViewController.swift */,
-				5D561BF727EA742F00A70223 /* DetailPageViewController.swift */,
-				5D7C694227EB348C00FFD652 /* SecondPageViewController.swift */,
+				5D561C0D27EA75FC00A70223 /* ContactListViewController.swift */,
+				5DA5C8D6289E4EC700F900C3 /* SelectionTableViewController.swift */,
+				5D561BF727EA742F00A70223 /* ContactDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -203,10 +203,10 @@
 			files = (
 				5D7C694527EB480F00FFD652 /* TabBarViewController.swift in Sources */,
 				5D561C1227EA775400A70223 /* Person.swift in Sources */,
+				5DA5C8D7289E4EC700F900C3 /* SelectionTableViewController.swift in Sources */,
 				5D561C1427EA77E900A70223 /* DataManager.swift in Sources */,
-				5D561BF827EA742F00A70223 /* DetailPageViewController.swift in Sources */,
-				5D561C0E27EA75FC00A70223 /* FirstPageViewController.swift in Sources */,
-				5D7C694327EB348C00FFD652 /* SecondPageViewController.swift in Sources */,
+				5D561BF827EA742F00A70223 /* ContactDetailsViewController.swift in Sources */,
+				5D561C0E27EA75FC00A70223 /* ContactListViewController.swift in Sources */,
 				5D561BF427EA742F00A70223 /* AppDelegate.swift in Sources */,
 				5D561BF627EA742F00A70223 /* SceneDelegate.swift in Sources */,
 			);

@@ -5,27 +5,29 @@
 //  Created by Masaie on 23/3/22.
 //
 
+import Foundation
+
 struct Person {
     
     let name: String
     let surname: String
-    let eMail: String
+    let email: String
     let phoneNumber: String
     
-    var fullname: String {
+    var fullName: String {
         "\(name) \(surname)"
     }
 }
 
 extension Person {
-    static func getContact() -> [Person] {
+    static func getContactList() -> [Person] {
         
-        var contacts: [Person] = []
+        var persons: [Person] = []
         
         let names = DataManager.shared.names.shuffled()
         let surnames = DataManager.shared.surnames.shuffled()
-        let emails = DataManager.shared.eMails.shuffled()
-        let phones = DataManager.shared.phoneNumbers.shuffled()
+        let emails = DataManager.shared.emails.shuffled()
+        let phones = DataManager.shared.phones.shuffled()
         
         let iterationCount = min(
             names.count,
@@ -38,12 +40,18 @@ extension Person {
             let person = Person(
                 name: names[index],
                 surname: surnames[index],
-                eMail: emails[index],
+                email: emails[index],
                 phoneNumber: phones[index]
             )
-            contacts.append(person)
+            
+            persons.append(person)
         }
         
-        return contacts
+        return persons
     }
+}
+
+enum Contacts: String {
+    case phone = "phone"
+    case email = "tray"
 }

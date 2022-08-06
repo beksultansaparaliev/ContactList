@@ -7,34 +7,31 @@
 
 import UIKit
 
-class FirstPageViewController: UITableViewController {
+class ContactListViewController: UITableViewController {
     
-    var contacts: [Person]!
+    var persons: [Person] = []
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    // MARK: - TableView DataSource
+    // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        contacts.count
+        persons.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "first", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
+        let person = persons[indexPath.row]
         
-        content.text = contacts[indexPath.row].fullname
-//        content.textProperties.color = .blue
+        content.text = person.fullName
         cell.contentConfiguration = content
+        
         return cell
     }
-    
+
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
-            guard let detailVC = segue.destination as? DetailPageViewController else { return }
-            detailVC.contact = contacts[indexPath.row]
+            guard let detailVC = segue.destination as? ContactDetailsViewController else { return }
+            detailVC.person = persons[indexPath.row]
         }
     }
 }
